@@ -1,0 +1,266 @@
+/* Reset de Estilos */
+
+* {
+    /* Remoção de espaçamentos do navegador */
+    margin: 0;
+    padding: 0;
+    /* Definição de box-sizing */
+    box-sizing: border-box;
+    /* Definição da estrutura de fontes padrão da página */
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color: var(--baseContentColor, white);
+}
+
+a {
+    /* Remoção de estilização padrão de links */
+    text-decoration: none;
+}
+
+
+
+/* Variáveis */
+
+:root {
+    /* Paleta principal de cores do site */
+    --backgroundColor: hsl(257, 40%, 49%);
+    --activeContentColor: hsl(300, 69%, 71%);
+    --baseContentColor: white;
+    /* Padronização de animações de elementos do site */
+    --baseAnimation: all 0.3s ease;
+}
+
+
+
+/* Estilização */
+
+body {
+    /* Layout principal da página, distribuindo os elementos em coluna */
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    /* Espaçamento das bordas da página */
+    padding: 39px 72px;
+    /* Plano de fundo com cor sólida e imagem SVG para detalhes estéticos */
+    background-color: var(--backgroundColor, indigo);
+    background-image: url("../assets/img/bg-desktop.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* Tamanho padrão do corpo da página */
+    height: 100vh;
+}
+
+.icone {
+    /* Cor padrão dos ícones na página */
+    fill: var(--baseContentColor, white);
+}
+
+.icone:hover {
+    /* Destaque padrão dos ícones ao passar o mouse por cima */
+    fill: var(--activeContentColor, magenta);
+    transition: var(--baseAnimation);
+    /* Interatividade dos ícones */
+    cursor: pointer;
+}
+
+#logo {
+    /* Medidas e espaçamento da logo */
+    width: 209px;
+    height: 64px;
+    margin-bottom: 57px;
+}
+
+#logo:hover {
+    /* Destaque de tamanho (crescimento) da logo ao passar o mouse por cima */
+    transform: scale(1.03);
+}
+
+#conteudo-principal {
+    /* Layout do conteúdo principal na tela, organizando a imagem e os textos lado a lado */ 
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.artigo {
+    /* Layout da caixa de texto da página, distribuídos igualmente em coluna */
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+    margin: 40px;
+}
+
+.artigo p {
+    /* Ajuste de espaçamento do subtexto específico */
+    margin-top: 5px;
+}
+
+.texto-principal {
+    /* Estrutura padrão para textos principais */
+    font-size: 2.4em;
+    font-weight: 600;
+}
+
+.subtexto {
+    /* Estrutura padrão para subtextos */
+    line-height: 30px;
+}
+
+.botao {
+    /* Estrutura padrão para botões */
+    text-align: center;
+    color: black;
+    background-color: var(--baseContentColor, white);
+    border-radius: 9999px;
+    border: none;
+    box-shadow: 0 3px 8px black;
+}
+
+#botao-cadastro {
+    /* Tamanho específico do botão de cadastro */
+    height: 50px;
+    width: 190px;
+}
+
+.botao:hover {
+    /* Destaque padrão de botões ao passar o mouse por cima */
+    cursor: pointer;
+    color: var(--baseContentColor, white);
+    font-weight: 600;
+    background-color: var(--activeContentColor, magenta);
+    transition: var(--baseAnimation);
+    transform: scale(1.02);
+}
+
+#rodape {
+    /* Layout do rodapé, distribuindo os elementos em linha */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.atribuicao {
+    /* Ajuste de tamanho de fonte para o texto de atribuição de créditos na página */
+    font-size: 0.7em;
+}
+
+.atribuicao a:hover {
+    /* Destaque de tamanho e coloração para os links contidos na atribuição de créditos */
+    color: var(--activeContentColor, magenta);
+    font-weight: 600;
+    transition: var(--baseAnimation);
+}
+
+.rede-social {
+    /* Distruição dos ícones de redes sociais em linha */
+    display: flex;
+    gap: 15px;
+}
+
+.icone-social {
+    /* Estrutura padrão para os ícones de redes sociais */
+    height: 32px;
+    width: 32px;
+    border: solid 1px var(--baseContentColor, white);
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.icone-social:hover {
+    /* Destaque padraão para os ícones de redes sociais ao passar o mouse por cima */
+    transform: scale(1.15);
+    border: solid 1px var(--activeContentColor, magenta);
+    transition: var(--baseAnimation);
+}
+
+
+
+/* Media Queries */
+
+@media (max-width: 375px) {
+    body {
+        /* Alteração de imagem de fundo e posicionamento na tela */
+        padding: 18px 28px;
+        background-image: url("../assets/img/bg-mobile.svg");
+        background-size: contain;
+        background-position: top;
+    }
+
+    #logo {
+        /* Ajuste de tamanho e espaçamento da logo */
+        width: 129px;
+        margin-left: 5px;
+        margin-bottom: 28px;
+    }
+
+    #conteudo-principal {
+        /* Alteração de layout principal para distribuição em coluna */
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+
+    .mockup {
+        /* Redução de tamanho e ajuste de espaçamento do mockup */
+        transform: scale(0.96);
+        margin-bottom: 32px;
+    }
+
+    .artigo {
+        /* Ajuste de layout da caixa de texto para mais compacto */
+        align-items: center;
+        text-align: center;
+        margin: 0px 6px;
+    }
+
+    .artigo p {
+        /* Ajuste de espaçamento do subtexto específico */
+        margin: 15px 0px 1px 0px;
+    }
+
+    .texto-principal {
+        /* Redimensionamento de textos principais */
+        font-size: 1.5em;
+        font-weight: 500;
+    }
+
+    .subtexto {
+        /* Redimensionamento de subtextos */
+        font-size: 0.9em;
+        font-weight: 200;
+        line-height: 24px;
+    }
+
+    .botao {
+        /* Redução de detalhes do botão para telas menores */
+        font-size: 0.7em;
+        box-shadow: none;
+    }
+
+    #botao-cadastro {
+        /* Compactação do tamanho do botão de cadastro */
+        height: 39px;
+    }
+
+    #rodape {
+        /* Alteração de layout do rodapé para distribuição em coluna */
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .atribuicao {
+        /* Redução de tamanho de fonte para o texto de atribuição de créditos */
+        font-size: 0.6em;
+    }
+
+    .rede-social {
+        /* Reorganização dos ícones de redes sociais para o novo layout */
+        justify-content: center;
+        gap: 12px;
+        margin-top: 10px;
+    }
+
+    .icone-social {
+        /* Redimensionamento dos ícones de redes sociais */
+        height: 28px;
+        width: 28px;
+    }
+}
