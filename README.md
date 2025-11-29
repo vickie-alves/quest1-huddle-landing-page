@@ -28,8 +28,8 @@ Foi proposto a replicação do design do site Huddle, garantindo a exibição da
 
 ## Links
 
-* **Live Site URL:** [Adicionar o link da sua página hospedada (GitHub Pages, Vercel, Netlify, etc.)]
-* **Repositório (Código Fonte):** https://github.com/vickie-alves/quest1-huddle-landing-page
+* **GitHub Pages:** (https://vickie-alves.github.io/quest1-huddle-landing-page/)
+* **Repositório:** (https://github.com/vickie-alves/quest1-huddle-landing-page)
 
 ## Autor
 
